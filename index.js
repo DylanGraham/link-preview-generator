@@ -172,9 +172,9 @@ module.exports = async (
   const obj = {};
   obj.title = await getTitle(page);
   obj.description = await getDescription(page);
-  obj.domain = await getDomainName(page, uri);
+  // obj.domain = await getDomainName(page, uri);
   obj.img = await getImg(page, uri);
 
   await browser.close();
-  return obj;
+  return JSON.stringify(obj);
 };
